@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+    <style>
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes animatedBorder {
+            0% {
+                border-color: #CD5808;
+            }
+            25% {
+                border-color: #8B4F09;
+            }
+            50% {
+                border-color: #6C2604;
+            }
+            75% {
+                border-color: #631000;
+            }
+            100% {
+                border-color: #450001;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #CD5808, #8B4F09, #6C2604, #631000, #450001);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #450001;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            background-color: #8B4F09;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #631000;
+        }
+
+        #nao {
+            background-color: #6C2604;
+        }
+
+        h1, h2 {
+            color: #450001;
+        }
+
+        img {
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>...</h1>
+        <img src="https://media1.giphy.com/media/3gNotAoIRZsb9UHPnj/200.webp?cid=790b76116333xae12dp1rf8cfcm9vbt265qfl3hkzvm7xhur&ep=v1_gifs_search&rid=200.webp&ct=g" alt="" height="250">
+        <h2></h2>
+        <a href="pagina8.html"><button id="sim">...</button></a>
+    </div>
+    
+</body>
+</html>

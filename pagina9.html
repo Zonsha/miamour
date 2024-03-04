@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+    <style>
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes animatedBorder {
+            0% {
+                border-color: #3c000a;
+            }
+            25% {
+                border-color: #65000e;
+            }
+            50% {
+                border-color: #910010;
+            }
+            75% {
+                border-color: #c10000;
+            }
+            100% {
+                border-color: #ecbfc2;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #3c000a, #65000e, #910010, #c10000, #ecbfc2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #ecbfc2;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            background-color: #65000e;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #c10000;
+        }
+
+        #nao {
+            background-color: #910010;
+        }
+
+        h1, h2 {
+            color: #3c000a;
+        }
+
+        img {
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Ah, que isso! Eu sempre soube 🥰</h1>
+        <img src="https://media.tenor.com/NsXyyhKvipEAAAAM/drink-love.gif" alt="" height="280">
+        <h2></h2>
+        <a href="pagina10.html"><button id="sim">💖</button></a>
+
+    </div>
+    
+</body>
+</html>

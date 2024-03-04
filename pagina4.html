@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+
+    <style>
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes animatedBorder {
+            0% {border-color: #0e0915;}
+            25% {border-color: #192240;}
+            50% {border-color: #545a8c;}
+            75% {border-color: #d386a7;}
+            100% {border-color: #fae28d;}
+        }
+
+        body{
+            background: linear-gradient(-45deg, #0e0915, #192240, #545a8c, #d386a7, #fae28d);
+            background-size: 300% 300%;
+            animation: gradientBG 15s ease infinite;
+            font-family: initial;
+            color: #fae28d;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: #0e0915;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: #fae28d;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #d386a7;
+        }
+
+        #nao {
+            background-color: #192240;
+        }
+
+        img{
+            Border-radius: 10px;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1>Então você deseja tentar novamente?</h1>
+
+        <img src="https://media.giphy.com/media/MQYhPa2Mu2IRG/giphy.gif?cid=ecf05e47wpw6yuzgxnh11lukq0rmemgz5kawd6afoeitr789&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" height="200">
+            
+        <h2 id="think">Só existe uma resposta certa!</h2>
+            
+        <a href="pagina5.html"><button id="sim"> Sim! </button></a>
+        <button id="nao" onclick="removeButton()"> Não! </button>
+
+    </div>
+
+    <script>
+
+        function removeButton() {
+            var naoButton = document.getElementById("nao");
+            naoButton.style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>

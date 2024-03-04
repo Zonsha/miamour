@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+    <style>
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes animatedBorder {
+            0% {
+                border-color: #005067;
+            }
+            25% {
+                border-color: #048399;
+            }
+            50% {
+                border-color: #FEB9C6;
+            }
+            75% {
+                border-color: #B96B85;
+            }
+            100% {
+                border-color: #021E20;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #005067, #048399, #FEB9C6, #B96B85, #021E20);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #021E20;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            background-color: #048399;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #B96B85;
+        }
+
+        #nao {
+            background-color: #FEB9C6;
+        }
+
+        h1, h2 {
+            color: #021E20;
+        }
+
+        img {
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Deseja se retirar de minha vida?</h1>
+        <img src="https://imgs.search.brave.com/qoHN0cqU9FBUM1k5Of-welU-ARR6ptqXF0CyppT9oAM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2FuYWxnaWYubmV0/L0dpZnMtYW5pbWFk/b3MvUGVyc29uYXMv/UGVuc2FuZG8vSW1h/Z2VuLWFuaW1hZGEt/UGVuc2FuZG8tMDQu/Z2lm.gif" alt="" height="250">
+        <h2 id="think">Pense muito bem!</h2>
+        <a href="pagina2.html"><button id="sim">Sim!</button></a>
+        <button id="nao" onclick="error()">Não!</button>
+    </div>
+    <script>
+        function error(){
+            alert("Ocorreu um erro, tente novamente.");
+        }
+    </script>
+</body>
+</html>

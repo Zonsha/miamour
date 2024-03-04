@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+    <style>
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes animatedBorder {
+            0% {border-color: #012442;}
+            25% {border-color: #7E627B;}
+            50% {border-color: #E38664;}
+            75% {border-color: #FFA566;}
+            100% {border-color: #5BA0BF;}
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #012442, #7E627B, #E38664, #FFA566, #5BA0BF);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #012442;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 120px;
+            background-color: #E38664;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #FFA566;
+        }
+
+        #nao {
+            background-color: #5BA0BF;
+        }
+
+        h1, h2 {
+            color: #012442;
+        }
+
+        img {
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1 id="h1">Como é que é?</h1>
+        <img src="https://imgs.search.brave.com/SZEROv2SVb8fz4NKzpNY5ceW2loF-qbasgIJy_K_vts/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTEudGVub3IuY29t/L20vTHZ5c094dlFo/N3NBQUFBQy90aGUt/cm9jay1jb25mdXNl/ZC5naWY.gif" alt="" height="250">            
+        <h2 id="think">Tem certeza disso? 🤨</h2>            
+        <a href="pagina3.html"><button id="sim"> Tenho! ☠️</button></a>
+        <button id="nao" onclick="error()"> Não tenho! 🤩</button>
+    </div>
+    <script>
+        function error(){
+            alert("Houve um erro no servidor interno da Google ao carregar esta página! ass: Senhor grandissíssimo presidente CEO da Google (é verdade esse bilete)");
+        }
+    </script>
+</body>
+</html>

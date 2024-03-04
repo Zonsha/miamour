@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+
+    <style>
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes animatedBorder {
+            0% {border-color: #E5D5CB;}
+            25% {border-color: #D58A68;}
+            50% {border-color: #BF705E;}
+            75% {border-color: #0A3A21;}
+            100% {border-color: #061D23;}
+        }
+
+        body{
+            background: linear-gradient(-45deg, #E5D5CB, #D58A68, #BF705E, #0A3A21, #061D23);
+            background-size: 300% 300%; /* Ajuste para tornar as últimas cores mais aparentes */
+            animation: gradientBG 15s ease infinite;
+            font-family: initial;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: #E5D5CB;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite linear;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #0A3A21;
+        }
+
+        #nao {
+            background-color: #BF705E;
+        }
+
+        img{
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1>Mermão, tá querendo ser levada pras ideias? 😡</h1>
+
+        <img src="data:image/jpeg;base64,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" alt="" height="250">
+            
+        <h2 id="think"></h2>
+            
+        <button id="sim" onclick="error()"> Quero! </button>
+        <a href="pagina4.html"><button id="nao"> Não quero! </button></a>
+
+    </div>
+
+    <script>
+
+        function error(){
+            alert("❓❓❓❓❓ Quem quer ser levado pras ideias? Você é tipo masoquista ou algo assim?")
+        }
+    </script>
+
+</body>
+</html>

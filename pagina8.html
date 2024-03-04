@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site dona Raissa</title>
+    <style>
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes animatedBorder {
+            0% {
+                border-color: #050507;
+            }
+            50% {
+                border-color: #362E2D;
+            }
+            100% {
+                border-color: #E3311D;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #AAACA1, #E3311D, #050507, #362E2D, #7C8685);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #7C8685;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 100px;
+            background-color: #362E2D;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, font-size 0.2s ease; /* Adicionado transição de tamanho de fonte */
+            animation: animatedBorder 10s infinite;
+        }
+
+        #sim:hover, #nao:hover {
+            transform: scale(1.1);
+        }
+
+        #sim {
+            background-color: #050507;
+        }
+
+        #nao {
+            background-color: #AAACA1;
+        }
+
+        h1, h2 {
+            color: #7C8685;
+        }
+
+        img {
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Você me ama... Né?</h1>
+        <img src="https://media.tenor.com/DYkSPvHVhO0AAAAM/side-eye-menacing.gif" alt="" height="250">
+        <h2></h2>
+        <a href="pagina9.html"><button id="sim" onclick="grow()">Sim! 💗</button></a>
+        <button id="nao" onclick="shrink()">Não! 💀</button>
+    </div>
+
+    <script>
+        function grow() {
+            var botaoSim = document.getElementById("nao");
+            var botaoNao = document.getElementById("sim");
+
+            botaoSim.style.width = (botaoSim.offsetWidth + 10) + "px"; 
+            botaoSim.style.height = (botaoSim.offsetHeight + 5) + "px"; 
+            botaoSim.style.fontSize = (parseFloat(window.getComputedStyle(botaoSim).fontSize) * 1.1) + "px"; 
+            botaoNao.style.width = (botaoNao.offsetWidth - 10) + "px"; 
+            botaoNao.style.height = (botaoNao.offsetHeight - 5) + "px"; 
+            botaoNao.style.fontSize = (parseFloat(window.getComputedStyle(botaoNao).fontSize) * 0.9) + "px"; 
+        }
+
+        function shrink() {
+            var botaoSim = document.getElementById("nao");
+            var botaoNao = document.getElementById("sim");
+
+            botaoSim.style.width = (botaoSim.offsetWidth - 10) + "px"; 
+            botaoSim.style.height = (botaoSim.offsetHeight - 5) + "px"; 
+            botaoSim.style.fontSize = (parseFloat(window.getComputedStyle(botaoSim).fontSize) * 0.9) + "px"; 
+            botaoNao.style.width = (botaoNao.offsetWidth + 10) + "px"; 
+            botaoNao.style.height = (botaoNao.offsetHeight + 5) + "px"; 
+            botaoNao.style.fontSize = (parseFloat(window.getComputedStyle(botaoNao).fontSize) * 1.1) + "px";
+        }
+    </script>
+</body>
+</html>

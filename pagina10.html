@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site pro meu amorzinho</title>
+    <style>
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes animatedBorder {
+            0% {
+                border-color: #5b0001;
+            }
+            25% {
+                border-color: #910002;
+            }
+            50% {
+                border-color: #c10000;
+            }
+            75% {
+                border-color: #c10000;
+            }
+            100% {
+                border-color: #c10000;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #3c000a, #65000e, #910010, #c10000, #ecbfc2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #3c000a;
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 500px;
+            min-height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid transparent;
+            animation: animatedBorder 10s infinite;
+            border-color: #c10000;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            background-color: #c10000;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s ease;
+            animation: animatedBorder 10s infinite;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        h1, h2 {
+            color: #3c000a;
+        }
+
+        img {
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Eu também te amo 💓</h1>
+        <h2>Toma webbitocas pra você! 😘</h2>
+        <img src="https://media4.giphy.com/media/l2Jhok92mZ2PZHjDG/200.webp?cid=ecf05e47hehkrqmj7tstue2pjqescvhd99wn9msvc3sfm9ax&ep=v1_gifs_search&rid=200.webp&ct=g" alt="" height="250">
+        <a href="https://www.tiktok.com/@umseromantico/video/7256571218990566662?q=mande%20para%20sua%20namorada&t=1709591857275"><button>💌</button></a>
+    </div>
+</body>
+</html>
